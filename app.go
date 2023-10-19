@@ -39,7 +39,7 @@ func (a *App) startup(ctx context.Context) {
 			os.Exit(0)
 		} else {
 			fmt.Println("Created desmume directory")
-			utils.DownloadAndExtract(filepath.Join(".", "desmume"))
+			fmt.Println(utils.DownloadAndExtract(filepath.Join(".", "desmume")))
 		}
 	} else {
 		fmt.Println("Desmume directory already exists")
