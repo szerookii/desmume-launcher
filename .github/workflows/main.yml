@@ -1,9 +1,6 @@
 name: Build Windows App
 
-on:
-  push:
-    branches:
-      - main
+on: workflow_dispatch
 
 jobs:
   build:
@@ -31,11 +28,11 @@ jobs:
         cd frontend
         npm i
         cd ..
-        wails build
+        wails build -production
         mv build/bin/desmume-launcher.exe build/bin/DeSmuME.exe
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: Release
+        name: DeSmuME
         path: build/bin/DeSmuME.exe
