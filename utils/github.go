@@ -44,6 +44,8 @@ func DownloadAndExtract(destinationPath string) error {
 		return fmt.Errorf("unsupported platform")
 	}
 
+	fmt.Println("Downloading DESmuME for " + platform + "...")
+
 	respData, err := downloadFile(fmt.Sprintf("https://api.github.com/repos/%s/%s/releases/latest", DESMUME_ORG, DESMUME_REPO))
 	if err != nil {
 		return fmt.Errorf("error getting latest release: %v", err)
