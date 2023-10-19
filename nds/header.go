@@ -1,0 +1,45 @@
+package nds
+
+type NDSHeader struct {
+	GameTitle               [12]byte
+	Gamecode                uint32
+	Makercode               uint16
+	Unitcode                uint8
+	EncryptionSeed          uint8
+	DeviceCapacity          uint8
+	Reserved                [7]byte
+	GameRevision            uint16
+	ROMVersion              uint8
+	InternalFlags           uint8
+	ARM9RomOffset           uint32
+	ARM9EntryAddress        uint32
+	ARM9LoadAddress         uint32
+	ARM9Size                uint32
+	ARM7RomOffset           uint32
+	ARM7EntryAddress        uint32
+	ARM7LoadAddress         uint32
+	ARM7Size                uint32
+	FileNameTable           uint32
+	FileNameTableSize       uint32
+	FileAllocationTable     uint32
+	FileAllocationTableSize uint32
+	ARM9OverlayOffset       uint32
+	ARM9OverlaySize         uint32
+	ARM7OverlayOffset       uint32
+	ARM7OverlaySize         uint32
+	NormalCardControl       uint32
+	SecureCardControl       uint32
+	IconBannerOffset        uint32
+	SecureAreaCRC           uint16
+	SecureTransferTimeout   uint16
+	ARM9Autoload            uint32
+	ARM7Autoload            uint32
+	SecureDisable           [8]uint32
+	NTRRegionROMSize        uint32
+	HeaderSize              uint32
+	Reserved2               [56]byte
+	NintendoLogo            [156]byte
+	NintendoLogoCRC         uint16
+	HeaderCRC               uint16
+	DebuggerReserved        [32]byte
+}

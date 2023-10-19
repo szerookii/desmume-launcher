@@ -19,3 +19,14 @@
 
 # Go workspace file
 go.work
+
+# Wails
+build/bin
+build/windows
+build/linux
+build/darwin
+
+# Others
+games
+desmume
+.idea
