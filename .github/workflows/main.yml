@@ -28,10 +28,7 @@ jobs:
         iwr https://get.pnpm.io/install.ps1 -useb | iex
 
     - name: Install Wails
-      run: go install github.com/wailsapp/wails/cmd/wails@latest
-
-    - name: Install Wails
-      run: go install github.com/wailsapp/wails/cmd/wails@latest
+      run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
     - name: Build Windows App
       run: |
