@@ -1,0 +1,11 @@
+{
+  "name": "desmume-launcher",
+  "outputfilename": "desmume-launcher",
+  "assetdir": "frontend/build",
+  "wailsjsdir": "frontend/src/lib",
+  "reloaddirs": "frontend/src",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto"
+}
