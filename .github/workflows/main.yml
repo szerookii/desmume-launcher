@@ -23,15 +23,12 @@ jobs:
     - name: Install Wails
       run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
 
-    - name: Install Garble
-      run: go install mvdan.cc/garble@latest
-
     - name: Build Windows App
       run: |
         cd frontend
         npm i
         cd ..
-        wails build -obfuscated -upx
+        wails build -upx
         mv build/bin/desmume-launcher.exe build/bin/DeSmuME.exe
 
     - name: Upload Artifact
