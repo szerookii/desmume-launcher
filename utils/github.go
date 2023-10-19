@@ -40,8 +40,6 @@ func DownloadAndExtract(destinationPath string) error {
 
 	if goos == "windows" {
 		platform = "win64"
-	} else if goos == "darwin" {
-		platform = "macOS"
 	} else {
 		fmt.Println("Unsupported platform")
 		return fmt.Errorf("unsupported platform")
