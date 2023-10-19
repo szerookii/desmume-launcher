@@ -1,4 +1,4 @@
-name: Build Windows Wails App
+name: Build Windows App
 
 on:
   push:
@@ -16,18 +16,26 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v2
       with:
-        go-version: 1.17
+        go-version: 1.21
+        
+    - name: Install Node.js and npm
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install pnpm
+      run: |
+        iwr https://get.pnpm.io/install.ps1 -useb | iex
+
+    - name: Install Wails
+      run: go install github.com/wailsapp/wails/cmd/wails@latest
 
     - name: Install Wails
       run: go install github.com/wailsapp/wails/cmd/wails@latest
 
     - name: Build Windows App
       run: |
-        wails init
-        cd frontend
-        wails build -p
-        cd ..
-        wails build -x
+        wails build
         mv build/bin/desmume-launcher.exe build/bin/DeSmuME.exe
 
     - name: Upload Artifact
