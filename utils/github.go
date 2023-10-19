@@ -36,6 +36,8 @@ func DownloadAndExtract(destinationPath string) error {
 	var platform string
 	goos := runtime.GOOS
 
+	fmt.Println("Downloading DESmuME for " + goos + "...")
+
 	if goos == "windows" {
 		platform = "win64"
 	} else if goos == "darwin" {
@@ -43,8 +45,6 @@ func DownloadAndExtract(destinationPath string) error {
 	} else {
 		return fmt.Errorf("unsupported platform")
 	}
-
-	fmt.Println("Downloading DESmuME for " + platform + "...")
 
 	respData, err := downloadFile(fmt.Sprintf("https://api.github.com/repos/%s/%s/releases/latest", DESMUME_ORG, DESMUME_REPO))
 	if err != nil {
