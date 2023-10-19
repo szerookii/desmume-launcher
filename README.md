@@ -1,6 +1,6 @@
 # desmume-launcher
 
-##About DeSmuME Launcher
+## About DeSmuME Launcher
 
 Welcome to DeSmuME Launcher, a sleek and user-friendly emulator launcher designed for enthusiasts of Nintendo DS gaming! Crafted with passion and powered by the Wails framework in Golang, this application provides a seamless experience for running your favorite DS games on your computer.
 
