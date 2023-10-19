@@ -1,8 +1,8 @@
-# wails-sveltekit
+# desmume-launcher
 
-## About
+##About DeSmuME Launcher
 
-A template using SvelteKit
+Welcome to DeSmuME Launcher, a sleek and user-friendly emulator launcher designed for enthusiasts of Nintendo DS gaming! Crafted with passion and powered by the Wails framework in Golang, this application provides a seamless experience for running your favorite DS games on your computer.
 
 ## Building
 
