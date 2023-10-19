@@ -37,10 +37,10 @@ func (a *App) startup(ctx context.Context) {
 		if err := os.Mkdir(filepath.Join(".", "desmume"), 0755); err != nil {
 			fmt.Println("Cannot create desmume directory")
 			os.Exit(0)
-		} else {
-			fmt.Println("Created desmume directory")
-			fmt.Println(utils.DownloadAndExtract(filepath.Join(".", "desmume")))
 		}
+
+		fmt.Println("Created desmume directory")
+		fmt.Println(utils.DownloadAndExtract(filepath.Join(".", "desmume")))
 	} else {
 		fmt.Println("Desmume directory already exists")
 	}
