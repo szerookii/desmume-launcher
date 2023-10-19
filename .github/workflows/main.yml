@@ -28,7 +28,7 @@ jobs:
         cd frontend
         npm i
         cd ..
-        wails build -production
+        wails build -obfuscated -upx
         mv build/bin/desmume-launcher.exe build/bin/DeSmuME.exe
 
     - name: Upload Artifact
