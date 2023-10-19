@@ -21,8 +21,8 @@ func main() {
 
 	err := wails.Run(&options.App{
 		Title:         "DeSmuME Launcher",
-		Width:         512,
-		Height:        384,
+		Width:         640,
+		Height:        480,
 		DisableResize: false,
 		Windows: &windows.Options{
 			Theme:             windows.Dark,
