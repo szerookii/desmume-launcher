@@ -7,6 +7,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"path/filepath"
 	"runtime"
 	"strings"
 )
@@ -39,10 +40,8 @@ func DownloadAndExtract(destinationPath string) error {
 		platform = "win64"
 	} else if goos == "darwin" {
 		platform = "macOS"
-	} else if goos == "linux" {
-		platform = "OpenEmu"
 	} else {
-		return fmt.Errorf("unsupported OS: %s", goos)
+		return fmt.Errorf("unsupported platform")
 	}
 
 	respData, err := downloadFile(fmt.Sprintf("https://api.github.com/repos/%s/%s/releases/latest", DESMUME_ORG, DESMUME_REPO))
@@ -92,7 +91,7 @@ func DownloadAndExtract(destinationPath string) error {
 		}
 		defer fileReader.Close()
 
-		destFilePath := destinationPath + "/" + file.Name
+		destFilePath := filepath.Join(destinationPath, file.Name)
 		destFile, err := os.Create(destFilePath)
 		if err != nil {
 			return fmt.Errorf("error creating destination file: %v", err)
