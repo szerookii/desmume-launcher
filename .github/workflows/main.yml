@@ -19,9 +19,9 @@ jobs:
         go-version: 1.21
         
     - name: Install Node.js and npm
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 21
         
     - name: Install Wails
       run: go install github.com/wailsapp/wails/v2/cmd/wails@latest
