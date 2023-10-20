@@ -6,7 +6,7 @@ Welcome to DeSmuME Launcher, a sleek and user-friendly emulator launcher designe
 
 ## Building
 
-To build this project in debug mode, use `wails build`. For production, use `wails build -production`.
+To build this project in debug mode, use `wails build`. For production, use `wails build -upx`.
 To generate a platform native package, add the `-package` flag.
 
 ## Live Development
