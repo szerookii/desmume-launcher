@@ -14,7 +14,7 @@
   }
 
   onMount(async () => {
-    games = await ListGames();
+    games = await ListGames(); 
 
     toast.success("Games loaded", {
         position: "top-right",
@@ -48,7 +48,7 @@
     <table class="table">
       <thead>
         <tr>
-          <th></th> 
+          <th>Icon</th>
           <th>Name</th> 
           <th>Developer</th>
           <th>Size</th> 
